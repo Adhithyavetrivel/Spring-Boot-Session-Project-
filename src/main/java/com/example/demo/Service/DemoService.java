@@ -24,4 +24,8 @@ public class DemoService{
     public List<DemoModel> getAll(){
         return repository.findAll();
     }
+
+    public DemoModel getById(int id){
+        return repository.findById(id);
+    }
 }

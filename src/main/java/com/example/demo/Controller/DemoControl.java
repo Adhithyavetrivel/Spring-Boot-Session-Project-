@@ -23,7 +23,7 @@ public class DemoControl {
     DemoService service;
 
     @PostMapping("/create")
-    public DemoModel create(@RequestBody DemoModel table) 
+    public DemoModel create(@RequestBody DemoModel table) {
         return service.create(table);
     }
 
@@ -36,4 +36,10 @@ public class DemoControl {
     public List<DemoModel> getAll() {
         return service.getAll();
     }
+
+    @GetMapping("path")
+    public String getMethodName(@RequestParam String param) {
+        return new String();
+    }
+    
 }
